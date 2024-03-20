@@ -102,7 +102,7 @@ const PlayGameOption = ({ game, handleOptionSelect }) => {
         </SwiperSlide>
         <SwiperSlide
           key={game.id}
-          className={selectedOption === game.id ? "selected" : ""}
+          className={selectedOption === null ? "selected" : ""}
           onClick={() => handleOptionClick(null)}
         >
           <div className="streamers__item">
