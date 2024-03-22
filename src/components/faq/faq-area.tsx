@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import { NavLink } from 'react-router-dom';
 
 // service images
 const service_images:string[] = [
