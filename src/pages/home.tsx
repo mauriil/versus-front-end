@@ -7,6 +7,7 @@ import TournamentArea from "../components/tournaments/tournament-area";
 import TournamentListArea from "../components/tournaments/tournament-list-area";
 import ServicesArea from "../components/services/services-area";
 import FaqArea from "../components/faq/faq-area";
+import TeamArea from "../components/team/team-area";
 
 export default function Home() {
   return (
@@ -29,6 +30,8 @@ export default function Home() {
         {/* tournament area start */}
         <TournamentArea />
         {/* tournament area end */}
+
+        <TeamArea />
 
         {/* Services area start*/}
         <ServicesArea />

@@ -47,7 +47,7 @@ export default function PlayPage() {
               >
                 <div className="tg-btn-3 tg-svg mx-auto mt-0 mb-5">
                   <SvgIconCom icon={"/assets/img/icons/shape.svg"} id="svg-1"/>
-                  <span>Ennviar</span>
+                  <span>Enviar</span>
                 </div>
               </div>
             </div>

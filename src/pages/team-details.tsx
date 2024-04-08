@@ -3,9 +3,7 @@ import Header from "../layout/header/header";
 import Footer from "../layout/footer/footer";
 import BreadcrumbArea from "../components/breadcrumb/breadcrumb-area";
 import TeamInfoArea from "../components/team/team-info-area";
-import TeamDetailsArea from "../components/team/team-details-area";
-import VideoArea from "../components/video/video-area";
-import TeamArea from "../components/team/team-area";
+import TeamInfoArea2 from "../components/team/team-info-area-2";
 import SEOCom from "../components/seo";
 
 
@@ -25,8 +23,8 @@ export default function TeamDetailsPage() {
       <main className="main--area">
         {/* breadcrumb area start */}
         <BreadcrumbArea
-          title="SHAKH DANIAL"
-          subtitle="TEAM DETAILS"
+          title="PERFIL DE JUGADOR"
+          subtitle="PERFIL DE JUGADOR"
           bg="/assets/img/bg/breadcrumb_bg01.jpg"
           brd_img="/assets/img/team/breadcrumb_team.png"
         />
@@ -36,17 +34,7 @@ export default function TeamDetailsPage() {
         <TeamInfoArea />
         {/* team info end */}
 
-        {/* team details area start */}
-        <TeamDetailsArea />
-        {/* team details area end */}
-
-        {/* video area start */}
-        <VideoArea />
-        {/* video area end */}
-
-        {/* team area start */}
-        <TeamArea />
-        {/* team area end */}
+        <TeamInfoArea2 />
 
         {/*  */}
       </main>

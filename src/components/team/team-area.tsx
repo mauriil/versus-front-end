@@ -12,8 +12,8 @@ const TeamArea = () => {
         <div className="row justify-content-center">
           <div className="col-xl-6 col-lg-7 col-md-10">
             <div className="section__title text-center mb-60">
-              <TextAnimation title="our team member" />
-              <h3 className="title">ACTIVE TEAM MEMBERS</h3>
+              <TextAnimation title="top 4" />
+              <h3 className="title">mejores jugadores</h3>
             </div>
           </div>
         </div>

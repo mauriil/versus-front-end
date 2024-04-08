@@ -1,8 +1,26 @@
 import { NavLink } from "react-router-dom";
 import tournament_data from "../../data/tournament-data";
 import TournamentListItem from "./tournament-list-item";
+import { useEffect, useState } from "react";
+import { getEvents } from "../../api/events";
 
 const TournamentListArea = () => {
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(0);
+
+  const fetchEvents = async () => {
+    try {
+      const response = await getEvents(3, page);
+      setEvents(response);
+    } catch (error) {
+      console.error("Error fetching events", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchEvents();
+  }, []);
   return (
     <section
       className="tournament__list-area section-pb-120 section-pt-120"
@@ -28,7 +46,7 @@ const TournamentListArea = () => {
           <div className="row">
             <div className="col-12">
               <div className="tournament__list-item-wrapper">
-                {tournament_data.map((item, i) => (
+                {events.map((item, i) => (
                   <TournamentListItem key={item.id} item={item} index={i} />
                 ))}
               </div>

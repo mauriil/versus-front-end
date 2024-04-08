@@ -9,7 +9,7 @@ type IProp = {
   index: number;
 };
 const TournamentListItem = ({ item, index }: IProp) => {
-  const expiryTimestamp = new Date(item.coming_time);
+  const expiryTimestamp = new Date(item.startDate);
   const { seconds, minutes, hours } = useTimer({ expiryTimestamp });
   return (
     <div
@@ -21,19 +21,19 @@ const TournamentListItem = ({ item, index }: IProp) => {
         <div className="tournament__list-thumb">
           <NavLink to="/tournament-details">
             <img
-              src={item.thumb}
+              src={item.image}
               alt="thumb"
             />
           </NavLink>
         </div>
         <div className="tournament__list-name">
-          <h5 className="team-name">{item.subtitle}</h5>
+          <h5 className="team-name">{item.title}</h5>
           <span className="status">{item.status}</span>
         </div>
         <div className="tournament__list-prize">
           <h6 className="title">Pozo acumulado</h6>
           <i className="fas fa-trophy"></i>
-          <span>${item.places}</span>
+          <span>${item.jackpot}</span>
         </div>
         <div className="tournament__list-time">
           <h6 className="title">Tiempo restante</h6>
@@ -41,7 +41,7 @@ const TournamentListItem = ({ item, index }: IProp) => {
           <span>{hours}h : {minutes}m : {seconds}s</span>
         </div>
         <div className="tournament__list-live">
-          <NavLink to={item.live_link} target="_blank">
+          <NavLink to={item._id} target="_blank">
             {item.status === 'Comenzado' ? 'Resultados' : 'Participar'} <i className="far fa-arrow-alt-circle-right"></i>
           </NavLink>
         </div>
